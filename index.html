@@ -30,7 +30,6 @@
             top: 0;
             width: 100%;
             display: flex;
-            backdrop-filter: blur(10px);
             justify-content: space-between;
             align-items: center;
             height: 70px;
@@ -164,10 +163,11 @@
 
         #presentation p {
             color: #35682D;
-            font-size: 20px;
+            font-size: 18px;
             font-family: 'Inter', sans-serif;
             font-weight: 600;
         }
+
         .flex-container {
             display: flex;
             align-items: center;
@@ -183,6 +183,7 @@
             height: auto;
             max-height: 500px;
             object-fit: cover;
+            border-radius: 8px;
         }
 
         footer {
@@ -236,6 +237,89 @@
             object-fit: contain;
         }
 
+        #farm {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        #farm p {
+            color: #526B5C;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .farm-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 40px;
+        }
+
+        .farm-image {
+            flex: 1 1 40%;
+            max-width: 40%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .farm-image img {
+            width: 130%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .farm-content {
+            flex: 1 1 60%;
+            max-width: 60%;
+            padding-left: 20px;
+        }
+
+        .farm-content p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .farm-content strong {
+            font-weight: bold;
+            color: #4f774f;
+        }
+
+        @media (max-width: 768px) {
+            .farm-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .farm-image,
+            .farm-content {
+                max-width: 100%;
+            }
+
+            .farm-content {
+                padding-left: 0;
+            }
+
+            .farm-image img {
+                width: 100%;
+            }
+            .footer-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-logos {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .footer-logos img {
+                max-width: 100px;
+            }
+        }
     </style>
 </head>
 
@@ -282,6 +366,31 @@
                 <img src="assets/images/presentation-image.jpg" alt="presentation image">
             </div>
         </section>
+        <section id="farm">
+            <div class="farm-container">
+                <div class="farm-image">
+                    <img src="assets/images/farm-rainbow.jpg" alt="Image de la ferme avec un arc-en-ciel">
+                </div>
+                <div class="farm-content">
+                    <h2>La ferme</h2>
+                    <p><strong>Les animaux :</strong><br>
+                        Nous élevons principalement des volailles telles que des pintades, poulets et dindes dans un écrin de verdure sur le plateau de Chaouilly. Nous avons également d’autres animaux tels que des lapins, chèvres, vaches Highland, poneys, chiens, chats qui sont nos auxiliaires pour l’apport en matière organique, pour défrichage de nos parcelles et le recyclage.
+                    </p>
+                    <p><strong>Le jardin botanique :</strong><br>
+                        Un espace est dédié aux plantes aromatiques, médicinales et ornementales pour le plaisir des yeux. Ce jardin participe directement aux bien-être et soins des animaux de la ferme ainsi qu’à la qualité et saveurs de nos produits finis.
+                    </p>
+                    <p><strong>Le potager :</strong><br>
+                        Nous cultivons un potager qui borde les ruisseaux de l’Ivry et du Brénon à Étreval. Cette production sert en grande partie pour la réalisation de nos délicieux Rösti et potages d’hiver.
+                    </p>
+                    <p><strong>Laboratoire :</strong><br>
+                        Nous possédons notre propre laboratoire de transformation immatriculé : 54-EANA-61 afin d’offrir à nos volailles jusqu’au derniers jours, les meilleures conditions.
+                    </p>
+                    <p><strong>Formation :</strong><br>
+                        Des formations sont proposées de 14h à 17h pour apprendre les techniques de base d’élevage de volailles avec les soins de plantes médicinales. Renseignements par téléphone.
+                    </p>
+                </div>
+            </div>
+        </section>
         <footer>
             <div class="footer-container">
                 <div class="footer-info">
@@ -297,7 +406,7 @@
                     <img src="assets/images/footer-logo/logo-union-europeenne.webp" alt="Logo Union Européenne">
                 </div>
             </div>
-        </footer>        
+        </footer>
 </body>
 
 <script>
