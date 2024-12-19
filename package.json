@@ -1,0 +1,15 @@
+{
+  "name": "lesregals-detreval",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build-css": "tailwindcss -i ./assets/css/styles.css -o ./assets/css/output.css"
+  }
+}
