@@ -15,7 +15,7 @@ body, html {
 
 h2 {
     font-family: "Playwrite US Trad", cursive;
-    color: #35682D;
+    color: #526B5C;
     font-weight: 500;
     font-size: 45px;
 }
@@ -113,7 +113,7 @@ h2 {
     background-color: #3F7A57;
     color: #fff;
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     cursor: pointer;
@@ -157,10 +157,27 @@ h2 {
 }
 
 #presentation p {
-    color: #35682D;
+    color: #526B5C;
     font-size: 18px;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+#foodtruck .product-button {
+    margin-top: 3vh;
+    margin-left: 30vh;
+    padding: 10px 30px;
+    background-color: #3F7A57;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: transform 0.2s linear;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+    font-weight: 800;
 }
 
 .flex-container {
@@ -174,8 +191,8 @@ h2 {
 }
 
 .image-container {
-    position: relative; /* Nécessaire pour positionner les éléments enfants absolument */
-    max-width: 100%; /* Assure que le conteneur ne dépasse pas */
+    position: relative;
+    max-width: 100%;
 }
 
 .image-container img {
@@ -183,20 +200,20 @@ h2 {
     height: auto;
     max-height: 500px;
     object-fit: cover;
-    border-radius: 12px; /* Coins arrondis de l'image */
-    position: relative; /* Nécessaire pour utiliser z-index */
-    z-index: 1; /* L'image reste devant */
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
 }
 
 .background-square {
     position: absolute;
-    top: -20px; /* Décale le carré de 20px vers le haut */
-    right: -20px; /* Décale le carré de 20px vers la droite */
-    width: 100%; /* Même largeur que l'image */
-    height: 100%; /* Même hauteur que l'image */
-    background-color: rgba(83, 197, 51, 0.15); /* Couleur semi-transparente pour le carré */
-    z-index: 0; /* Le carré reste derrière l'image */
-    border-radius: 12px; /* Coins arrondis comme l'image */
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 197, 51, 0.15);
+    z-index: 0;
+    border-radius: 12px;
 }
 
 footer {
@@ -204,7 +221,7 @@ footer {
     text-align: center;
     padding: 20px;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 footer p {
@@ -251,13 +268,13 @@ footer p {
 }
 
 #farm {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    margin-top : 50px;
 }
 
 #farm p {
     color: #526B5C;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     font-size: 18px;
 }
 
@@ -266,8 +283,8 @@ footer p {
     flex-direction: row;
     align-items: flex-start;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 40px;
+    max-width: 1600px;
+    margin: 0 0px;
 }
 
 .farm-image {
@@ -278,7 +295,7 @@ footer p {
 }
 
 .farm-image img {
-    width: 130%;
+    width: 180%;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
@@ -287,7 +304,6 @@ footer p {
 .farm-content {
     flex: 1 1 60%;
     max-width: 60%;
-    padding-left: 20px;
 }
 
 .farm-content p {
@@ -299,6 +315,41 @@ footer p {
 .farm-content strong {
     font-weight: bold;
     color: #4f774f;
+}
+
+.map-container {
+    width: 100%;
+    height: 50vh;
+}
+
+iframe {
+    border: 0;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-wrapper svg {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+#foodtruck {
+    padding: 100px 50px;
+}
+
+.foodtruck-image img {
+    margin-top: 120px;
+    width: 100%;
+    height: 550px;
+}
+
+#foodtruck p {
+    color: #526B5C;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {

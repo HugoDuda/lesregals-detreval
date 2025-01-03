@@ -21,7 +21,7 @@
             <a href="#contact">CONTACT</a>
         </div>
     </div>
-    <section id="hero">
+    <section id="hero" class="opacity-0 translate-y-10 transition-all duration-1000 ease-in-out">
         <div class="hero-content">
             <h3>Dans l’esprit de Laudato Si’<br>
             Une ferme, un foodtruck, un gîte à Étreval.</h3><br>
@@ -32,7 +32,7 @@
         </div>
     </section>
     <section id="presentation" class="flex-container relative">
-        <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-gray-200 sm:-mr-80 lg:-mr-96 white:bg-slate-800" aria-hidden="true"></div>
+        <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-lg shadow-gray-200 sm:-mr-80 lg:-mr-96 white:bg-slate-800" aria-hidden="true"></div>
             <div class="text-container">
                 <h2>Présentation</h2><br>
                 <p>
@@ -52,31 +52,108 @@
                 <img src="assets/images/presentation-image.jpg" alt="presentation image">
             </div>
     </section>
-        <section id="farm">
+
+        <section id="farm" class="flex-container relative">
+            <!-- <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-black/10 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true"><defs><pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse"><path d="M100 200V.5M.5 .5H200" fill="none"></path></pattern></defs><rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect></svg> -->
             <div class="farm-container">
-                <div class="farm-image">
-                    <img src="assets/images/farm-rainbow.jpg" alt="Image de la ferme avec un arc-en-ciel">
-                </div>
                 <div class="farm-content">
-                    <h2>La ferme</h2>
-                    <p><strong>Les animaux :</strong><br>
-                        Nous élevons principalement des volailles telles que des pintades, poulets et dindes dans un écrin de verdure sur le plateau de Chaouilly. Nous avons également d’autres animaux tels que des lapins, chèvres, vaches Highland, poneys, chiens, chats qui sont nos auxiliaires pour l’apport en matière organique, pour défrichage de nos parcelles et le recyclage.
-                    </p>
-                    <p><strong>Le jardin botanique :</strong><br>
-                        Un espace est dédié aux plantes aromatiques, médicinales et ornementales pour le plaisir des yeux. Ce jardin participe directement aux bien-être et soins des animaux de la ferme ainsi qu’à la qualité et saveurs de nos produits finis.
-                    </p>
-                    <p><strong>Le potager :</strong><br>
-                        Nous cultivons un potager qui borde les ruisseaux de l’Ivry et du Brénon à Étreval. Cette production sert en grande partie pour la réalisation de nos délicieux Rösti et potages d’hiver.
-                    </p>
-                    <p><strong>Laboratoire :</strong><br>
-                        Nous possédons notre propre laboratoire de transformation immatriculé : 54-EANA-61 afin d’offrir à nos volailles jusqu’au derniers jours, les meilleures conditions.
-                    </p>
-                    <p><strong>Formation :</strong><br>
-                        Des formations sont proposées de 14h à 17h pour apprendre les techniques de base d’élevage de volailles avec les soins de plantes médicinales. Renseignements par téléphone.
-                    </p>
+                    <div class="max-w-4xl mx-auto bg-white p-6 space-y-8">
+                        <h2>La Ferme</h2>
+                        <div class="flex items-start space-x-4">
+                        <div>
+                            <p class="text-gray-600">
+                            <strong>🐔 Les animaux :</strong><br>
+                            Nous élevons principalement des volailles telles que des pintades, poulets et dindes dans un écrin de verdure sur le plateau de Chaouilly. Nous avons également d’autres animaux tels que des lapins, chèvres, vaches Highland, poneys, chiens, chats qui sont nos auxiliaires pour l’apport en matière organique, pour défrichage de nos parcelles et le recyclage.
+                            </p>
+                        </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div>
+                            <p><strong>🌿 Le Jardin Botanique :</strong></p>
+                            <p class="text-gray-600">
+                            Un espace est dédié aux plantes aromatiques, médicinales et ornementales pour le plaisir des yeux. Ce jardin participe directement aux bien-être et soins des animaux de la ferme ainsi qu’à la qualité et saveurs de nos produits finis.
+                            </p>
+                        </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div>
+                            <p><strong>🍅 Le Potager :</strong></p>
+                            <p class="text-gray-600">
+                            Nous cultivons un potager qui borde les ruisseaux de l’Ivry et du Brénon à Étreval. Cette production sert en grande partie pour la réalisation de nos délicieux Rösti et potages d’hiver.
+                            </p>
+                        </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                        <div>
+                            <p><strong>🧪 Laboratoire :</strong></p>
+                            <p class="text-gray-600">
+                            Nous possédons notre propre laboratoire de transformation immatriculé : 54-EANA-61 afin d’offrir à nos volailles jusqu’au derniers jours, les meilleures conditions.
+                            </p>
+                        </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                        <div>
+                            <p><strong>📚 Formation :</strong></p>
+                            <p class="text-gray-600">
+                            Des formations sont proposées de 14h à 17h pour apprendre les techniques de base d’élevage de volailles avec les soins de plantes médicinales. Renseignements par téléphone.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="img2" class="farm-image opacity-0 translate-y-10 transition-all duration-1000 ease-in-out shadow-xl shadow-dark-800">
+                    <img src="assets/images/farm-rainbow.jpg" alt="Image de la ferme avec un arc-en-ciel">
                 </div>
             </div>
         </section>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.0444918093026!2d6.050251076869905!3d48.45567587128036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47935d82ffa36837%3A0xc8dd2da4bca1af56!2sles%20R%C3%A9gals%20d&#39;Etreval!5e0!3m2!1sen!2sfr!4v1735864911685!5m2!1sen!2sfr"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+            <section id="foodtruck" class="flex flex-wrap lg:flex-nowrap items-start lg:space-x-8">
+                <!-- Texte -->
+                <div class="text-container w-full lg:w-2/3 space-y-6">
+                    <h2>Foodtruck</h2>
+                    <p class="mt-4 text-gray-700">
+                        Notre foodtruck entièrement équipé nous permet de faire venir notre ferme jusqu’à vous et de cuisiner sur place afin de profiter de nos produits « tout frais, tout chauds » ! 
+                        Nous pouvons ainsi répondre à une demande d’événementiels, et être présents sur les marchés locaux. 
+                        Nous accueillons nos clients sur notre ferme le samedi après-midi uniquement sur RDV.   
+                        Une fois par an nous faisons une porte ouverte. <br><br>
+                        Nous nous déplaçons sur les marchés locaux, lors d'évènements professionnels, associatifs et privés autour de 50 km de Vézelise.<br> Pour nous trouver : <br>
+                        Attention : les demandes sont honorées en fonction de notre production car aucune denrée ne vient de l’extérieur de notre production.
+                        Il est donc souhaitable de nous prévenir 3 mois avant. <br><br>
+                        Pour nous retrouver :  <br>
+                        Facebook : les régals d’Etreval  <br>
+                        Passez commande c’est préférable ! 
+                    </p>
+                    <!-- Boutons alignés horizontalement -->
+                    <div class="flex space-x-4">
+                        <button class="group relative h-12 w-48 overflow-hidden rounded-2xl bg-green-500 text-lg font-bold text-white" onclick="window.location='#produits'">
+                            Nos produits
+                            <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+                        </button>
+                        <button class="btn group flex items-center bg-transparent p-2 px-6 text-xl font-thin tracking-widest text-black">
+                            <span class="relative pr-4 pb-1 text-black after:transition-transform after:duration-500 after:ease-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-blue-500 after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100">Contact</span>
+                            <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal" class="-translate-x-2 fill-slate-700 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105 group-hover:fill-blue-500">
+                                <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Image -->
+                <div id="img3" class="image-container opacity-0 translate-y-10 transition-all duration-1000 ease-in-out">
+                    <div class="background-square"></div>
+                    <img src="assets/images/foodtruck-image.jpg" alt="presentation image">
+                </div>
+            </section>
+            
         <footer>
             <div class="footer-container">
                 <div class="footer-info">
@@ -118,11 +195,26 @@
         const presentationSection = document.getElementById('img');
         const sectionTop = presentationSection.getBoundingClientRect().top;
         const viewportHeight = window.innerHeight;
-
         if (sectionTop < viewportHeight) {
             presentationSection.classList.remove('opacity-0', 'translate-y-10');
             presentationSection.classList.add('opacity-100', 'translate-y-0');
         }
+        const farmSection = document.getElementById('img2');
+        const sectionTop2 = farmSection.getBoundingClientRect().top;
+        if (sectionTop2 < viewportHeight) {
+            farmSection.classList.remove('opacity-0', 'translate-y-10');
+            farmSection.classList.add('opacity-100', 'translate-y-0');
+        }
+        const foodtruckSection = document.getElementById('img3');
+        const sectionTop3 = farmSection.getBoundingClientRect().top;
+        if (sectionTop3 < viewportHeight) {
+            foodtruckSection.classList.remove('opacity-0', 'translate-y-10');
+            foodtruckSection.classList.add('opacity-100', 'translate-y-0');
+        }
     });
+        const heroSection = document.getElementById('hero');
+        const sectionTop3 = heroSection.getBoundingClientRect().top;
+        heroSection.classList.remove('opacity-0', 'translate-y-10');
+        heroSection.classList.add('opacity-100', 'translate-y-0');
 </script>
 </html>
