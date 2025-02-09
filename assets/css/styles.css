@@ -34,11 +34,13 @@ h2 {
     transition: background-color 0.7s ease-in-out;
 }
 
-.menu {
-    display: flex;
-    gap: 60px;
-    padding-right: 50px;
-}
+@media (min-width: 900px) {
+    .menu {
+        display: flex;
+        gap: 60px;
+        padding-right: 50px;
+    }
+  }  
 
 .navbar.transparent .menu a {
     color: #fff;

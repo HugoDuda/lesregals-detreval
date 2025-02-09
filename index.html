@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/output.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
     <title>LES RÉGALS D'ÉTREVAL - Gîte Nancy</title>
     <link
     rel="stylesheet"
@@ -14,21 +14,44 @@
     src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"
     defer
   ></script>
+  <style>
+    [x-cloak] {
+      display: none !important;
+    }
+  </style>
 </head>
-
-<body>
-    <div class="navbar transparent">
-        <div class="logo">
-            <img src="assets/images/navbar-logo.png" alt="Logo" onclick="window.location='#hero'">
-        </div>
-        <div class="menu">
-            <a href="#presentation">PRÉSENTATION</a>
-            <a href="#foodtruck">FOODTRUCK</a>
-            <a href="#gite">GÎTE</a>
-            <a href="#produits">NOS PRODUITS</a>
-            <a href="#contact">CONTACT</a>
-        </div>
+<body x-data="{ open: false }">
+  <div class="navbar transparent fixed top-0 w-full flex justify-between items-center p-4 z-50">
+    <div class="logo">
+      <img src="assets/images/navbar-logo.png" alt="Logo" onclick="window.location='#hero'" />
     </div>
+    <div class="menu hidden md:flex gap-60 pr-12">
+      <a href="#presentation">PRÉSENTATION</a>
+      <a href="#foodtruck">FOODTRUCK</a>
+      <a href="#gite">GÎTE</a>
+      <a href="#produits">NOS PRODUITS</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+    <div class="md:hidden">
+      <button id="hamburgerButton" @click="open = !open" class="focus:outline-none text-white">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div x-show="open" x-transition x-cloak
+       class="md:hidden fixed inset-0 z-40 bg-black bg-opacity-90 flex items-center justify-center"
+       @click.self="open = false">
+    <div class="flex flex-col space-y-4">
+      <a href="#presentation" class="block px-4 py-2 text-white font-bold text-xl" @click="open = false">PRÉSENTATION</a>
+      <a href="#foodtruck" class="block px-4 py-2 text-white font-bold text-xl" @click="open = false">FOODTRUCK</a>
+      <a href="#gite" class="block px-4 py-2 text-white font-bold text-xl" @click="open = false">GÎTE</a>
+      <a href="#produits" class="block px-4 py-2 text-white font-bold text-xl" @click="open = false">NOS PRODUITS</a>
+      <a href="#contact" class="block px-4 py-2 text-white font-bold text-xl" @click="open = false">CONTACT</a>
+    </div>
+  </div>
     <section id="hero" class="opacity-0 translate-y-10 transition-all duration-1000 ease-in-out">
         <div class="hero-content">
             <h3>Dans l’esprit de Laudato Si’<br>
@@ -39,9 +62,9 @@
             <button onclick="window.location='#presentation'">Nous découvrir</button>
         </div>
     </section>
-    <section id="presentation" class="flex-container relative">
+    <section id="presentation" class="flex-container flex-wrap lg:flex-nowrap items-start lg:space-x-8">
         <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-lg shadow-gray-200 sm:-mr-80 lg:-mr-96 white:bg-slate-800" aria-hidden="true"></div>
-            <div class="text-container">
+            <div class="text-container w-full lg:w-2/3 space-y-6">
                 <h2>Présentation</h2><br>
                 <p>
                     Proche de Vézelise, au pied de la colline de Sion, Delphine et Hervé ont puisé dans leurs expériences
@@ -164,8 +187,8 @@
                     </div>
                 </div>
             </section>
-            <section id="gite" class="flex-container relative">
-                    <div class="text-container">
+            <section id="gite" class="flex-container flex-wrap lg:flex-nowrap items-start lg:space-x-8">
+                    <div class="text-container w-full lg:w-2/3 space-y-6">
                         <h2>Gîte</h2><br>
                         <p>
                             Nous possédons un gîte spacieux pouvant accueillir jusqu’à 7 personnes minimum au cœur du petit village d’Etreval.<br>
@@ -378,7 +401,6 @@
         const heroButton = document.querySelector('.hero-content button');
         const heroText = document.querySelector('.hero-content p');
         const heroTitle = document.querySelector('.hero-content h3');
-
         heroLogo.style.transform = `translateY(${scrollTop * -0.1}px)`;
         heroButton.style.transform = `translateY(${scrollTop * -0.1}px)`;
         heroText.style.transform = `translateY(${scrollTop * -0.1}px)`;
@@ -416,9 +438,16 @@
             giteSection.classList.remove('opacity-0', 'translate-y-10');
             giteSection.classList.add('opacity-100', 'translate-y-0');
         }
+        const hamburger = document.getElementById('hamburgerButton');
+        if (window.scrollY > 50) {
+          hamburger.classList.remove('text-white');
+          hamburger.classList.add('text-[#526B5C]');
+        } else {
+          hamburger.classList.remove('text-[#526B5C]');
+          hamburger.classList.add('text-white');
+        }
     });
         const heroSection = document.getElementById('hero');
-        const sectionTop3 = heroSection.getBoundingClientRect().top;
         heroSection.classList.remove('opacity-0', 'translate-y-10');
         heroSection.classList.add('opacity-100', 'translate-y-0');
 </script>
