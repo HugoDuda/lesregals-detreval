@@ -1060,19 +1060,13 @@ h2 {
 }
 
 #hero {
-  height: 105vh;
+  height: 1080px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: url('../images/index-background.jpg') center/cover no-repeat;
   margin: 0;
   position: relative;
-}
-
-@media (max-height: 730px) {
-  #hero {
-    height: 730px;
-  }
 }
 
 .hero-content {
