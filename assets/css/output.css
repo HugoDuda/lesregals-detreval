@@ -1069,6 +1069,12 @@ h2 {
   position: relative;
 }
 
+@media (max-height: 730px) {
+  #hero {
+    height: 730px;
+  }
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
