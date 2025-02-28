@@ -484,5 +484,16 @@ iframe {
     #foodtruck .image-container {
         margin-bottom: 2rem;
     }
+    #presentation .text-container,
+    #gite .text-container,
+    #foodtruck .text-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .background-square {
+        display: none;
+    }
   }
   

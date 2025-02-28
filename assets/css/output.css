@@ -1430,21 +1430,15 @@ iframe {
 }
 
 @media (max-width: 1000px) {
-  /* Pour les conteneurs d'images généraux */
-
   .image-container {
     width: 100% !important;
     max-width: 100% !important;
   }
 
-  /* Pour le conteneur de l'image de la ferme */
-
   .farm-image {
     width: 100% !important;
     max-width: 100% !important;
   }
-
-  /* Pour que les images s'ajustent bien dans leur conteneur */
 
   .image-container img,
     .farm-image img {
@@ -1452,14 +1446,10 @@ iframe {
     height: auto;
   }
 
-  /* On retire les padding horizontaux sur toutes les sections */
-
   section {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-
-  /* Pour les conteneurs spécifiques qui ajoutent des marges ou un max-width */
 
   .image-container,
     .farm-image,
@@ -1480,6 +1470,19 @@ iframe {
 
   #foodtruck .image-container {
     margin-bottom: 2rem;
+  }
+
+  #presentation .text-container,
+    #gite .text-container,
+    #foodtruck .text-container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .background-square {
+    display: none;
   }
 }
 
